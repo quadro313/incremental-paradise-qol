@@ -426,7 +426,6 @@ public class EntryPointClient implements ClientModInitializer {
         List<Text> text = lore.lines();
         List<String> blocks = parseLoreLines(text);
 
-
         if (blocks.get(0).contains("Ticket Task")) {
             String[] taskDetails = extractTaskDetails(blocks.get(0));
 
@@ -437,9 +436,6 @@ public class EntryPointClient implements ClientModInitializer {
             String type = taskDetails[2];
 
             Task newTask = new Task(stack.getName().getString(), description, "/warp ", 1, false, world, number, type,true);
-            if (stack.getItem().getName().getString().contains("Written")) {
-                newTask.setCompleted();
-            }
             taskList.add(newTask);
         }
     }
