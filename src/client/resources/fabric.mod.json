@@ -1,29 +1,44 @@
 {
 	"schemaVersion": 1,
 	"id": "incremental-paradise-qol",
-	"version": "${version}",
+	"version": "2.5.3",
 	"name": "Incremental Paradise QoL",
 	"description": "A bunch of handy tweaks and additions for the Incremental Paradise server. Client-side only.",
 	"authors": [
+		"AlvinTheFox",
+		"Jeremyrab",
 		"Johulk",
-		"Razorspined"
+		"Razorspined",
+		"AlvinTheFox",
+		"Jeremyrab"
 	],
 	"contact": {
 		"sources": "https://github.com/quadro313/incremental-paradise-qol"
 	},
 	"license": "CC0-1.0",
-	"icon": "template-mod/icon.png",
+	"icon": "icon/pack.png",
 	"environment": "client",
 	"entrypoints": {
-		"client": ["com.incrementalqol.EntryPointClient"]
+		"client": [
+			"com.incrementalqol.modules.SkillManager.AutoSkillModule",
+			"com.incrementalqol.modules.DepositHotkey.DepositHotkeyModule",
+			"com.incrementalqol.modules.DepositHotkey.SellAllHotkeyModule",
+			"com.incrementalqol.modules.TaskTracker.TaskTrackerModule",
+			"com.incrementalqol.modules.PetXpCalculator.PxpCalculatorModule",
+			"com.incrementalqol.modules.CommandAliases.CommandAliasModule",
+			"com.incrementalqol.modules.Loadouts.LoadoutsModule",
+		"com.incrementalqol.modules.BlueprintSwap.BlueprintSwapModule",
+		"com.incrementalqol.modules.OptionsModule",
+		"com.incrementalqol.modules.LinkCommandModule",
+		"com.incrementalqol.modules.ConsumableTimer.ConsumableTimerModule"
+		]
 	},
 	"mixins": [
 		"incremental-qol.client.mixins.json"
-
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.4",
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
 		"java": ">=21",
 		"fabric-api": "*"
 	},

@@ -1,11 +1,16 @@
 {
-	"required": true,
-	"package": "com.incrementalqol.mixins",
-	"compatibilityLevel": "JAVA_21",
-	"client": [
-		"TaskProgressMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "com.incrementalqol.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "EntityRenderer",
+    "ClientPlayNetworkHandler",
+    "HandledScreen",
+    "BossBarHud",
+    "Entity",
+    "ParticleManager"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }
